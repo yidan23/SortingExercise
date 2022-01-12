@@ -1,7 +1,12 @@
 public class SortingAlgorithms{
-	private int[] arr = int[100];
+	private int[] array = {10, 9, 8, 7 , 6, 5, 4, 3, 2, 1};
 	
 	public void bubbleSort(){
+		int[] arr = new int[array.length];
+		for(int x = 0; x<arr.length; x++){
+			arr[x] = array[x];
+		}
+		
 		int swaps = 0;
 		int temp = 0;
 		int counter = 10;
@@ -17,11 +22,15 @@ public class SortingAlgorithms{
 				}
 			}
 		}
-		System.out.println(swaps);
+		System.out.println("Bubble Sort Swaps: " + swaps);
 	}
 	
 	
 	public void selectionSort(){
+		int[] arr = new int[array.length];
+		for(int x = 0; x<arr.length; x++){
+			arr[x] = array[x];
+		}
 		int swaps = 0;
 		int min = 0;
 		int temp = 0;
@@ -39,11 +48,15 @@ public class SortingAlgorithms{
 				swaps++;
 			}
 		}
-		System.out.println(swaps);
+		System.out.println("Selection Sort Swaps: " + swaps);
 	}
 	
 	
 	public void insertionSort(){
+		int[] arr = new int[array.length];
+		for(int x = 0; x<arr.length; x++){
+			arr[x] = array[x];
+		}
 		int swaps = 0;
 		int temp = 0;
 		for(int i = 1; i<arr.length; i++){		
@@ -56,6 +69,6 @@ public class SortingAlgorithms{
 			}
 			arr[k] = temp;
 		}
-		System.out.println(swaps);
+		System.out.println("Insertion Sort Swaps: " + swaps);
 	}
 }
